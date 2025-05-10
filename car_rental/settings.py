@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,3 +121,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+import os
+import dj_database_url
+
+# Static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Database
+DATABASES = {
+    'default': dj_database_url.config(conn_max_age=600),
+}
+
+# Allowed hosts
+ALLOWED_HOSTS = ['*']  # Or later use your railway app domain
