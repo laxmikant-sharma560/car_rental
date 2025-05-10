@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
@@ -125,7 +125,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-ALLOWED_HOSTS = ['car_rental.onrender.com']
+ALLOWED_HOSTS = ['car-rental-1sym.onrender.com', 'localhost', '127.0.0.1']
+
+
+
+
 
 
 
@@ -139,3 +143,6 @@ import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
 }
+
+
+# git add .
