@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -124,15 +124,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 import os
+
+ALLOWED_HOSTS = ['car_rental.onrender.com']
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# WhiteNoise
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600)
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
 }
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-SECRET_KEY = os.environ.get('django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['*']
