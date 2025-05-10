@@ -133,6 +133,6 @@ DATABASES = {
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['*']
