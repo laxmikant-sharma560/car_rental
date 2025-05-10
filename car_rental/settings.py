@@ -126,13 +126,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 import dj_database_url
 
-# Static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Database
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600),
+    'default': dj_database_url.config(conn_max_age=600)
 }
 
-# Allowed hosts
-ALLOWED_HOSTS = ['*']  # Or later use your railway app domain
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+ALLOWED_HOSTS = ['*']
