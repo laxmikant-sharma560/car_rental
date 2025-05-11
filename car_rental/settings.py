@@ -125,7 +125,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-ALLOWED_HOSTS = ['car_rental.onrender.com', 'car-rental-1sym.onrender.com']
+ALLOWED_HOSTS = ['https://car-rental-1sym.onrender.com/']
+
 
 
 
