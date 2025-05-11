@@ -23,7 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8a=i*=8$g37!6+oy+-eo)tmoslh*t!8l8&c=pc$q2k+zr^qf@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True  # or False in production
+
+CSRF_TRUSTED_ORIGINS = ['https://car-rental-1sym.onrender.com']  # Only if using DEBUG=False
+
 
 
 
@@ -125,7 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-ALLOWED_HOSTS = ['https://car-rental-1sym.onrender.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost' , 'car-rental-1sym.onrender.com']
+
 
 
 

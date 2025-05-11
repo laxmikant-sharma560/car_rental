@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %} 
 {% block data %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
         <!-- Carousel Start -->
         <div class="header-carousel">
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
@@ -18,6 +21,7 @@
                                         <div class="bg-secondary rounded p-5">
                                             <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
                                             <form>
+                                                {% csrf_token %}
                                                 <div class="row g-3">
                                                     <div class="col-12">
                                                         <select class="form-select" aria-label="Default select example">
@@ -107,6 +111,7 @@
                                         <div class="bg-secondary rounded p-5">
                                             <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
                                             <form>
+                                                {% csrf_token %}
                                                 <div class="row g-3">
                                                     <div class="col-12">
                                                         <select class="form-select" aria-label="Default select example">
@@ -197,7 +202,7 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Features</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">Our Central Features are designed to make car rentals seamless, efficient, and customer-friendly. These key functionalities improve service quality and user convenience.
                     </p>
                 </div>
                 <div class="row g-4 align-items-center">
@@ -210,7 +215,7 @@
                                     </div>
                                     <div class="ms-4">
                                         <h5 class="mb-3">First Class services</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
+                                        <p class="mb-0">Experience unmatched customer service with well-maintained vehicles, dedicated support, and flexible rental plans that make every journey premium.</p>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +226,7 @@
                                     </div>
                                     <div class="ms-4">
                                         <h5 class="mb-3">24/7 road assistance</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
+                                        <p class="mb-0">Travel with peace of mind knowing our emergency support is available anytime, anywhere—no matter the road or situation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +241,7 @@
                                 <div class="feature-item justify-content-end">
                                     <div class="text-end me-4">
                                         <h5 class="mb-3">Quality at Minimum</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
+                                        <p class="mb-0"> Get the best value for your money. We offer high-quality, well-maintained cars at competitive prices without hidden charges.</p>
                                     </div>
                                     <div class="feature-icon">
                                         <span class="fa fa-tag fa-2x"></span>
@@ -247,7 +252,7 @@
                                 <div class="feature-item justify-content-end">
                                     <div class="text-end me-4">
                                         <h5 class="mb-3">Free Pick-Up & Drop-Off</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, in illum aperiam ullam magni eligendi?</p>
+                                        <p class="mb-0">Enjoy our complimentary vehicle delivery and return service at your home, office, or preferred location for maximum convenience.</p>
                                     </div>
                                     <div class="feature-icon">
                                         <span class="fa fa-map-pin fa-2x"></span>
@@ -269,7 +274,8 @@
                         <div class="about-item">
                             <div class="pb-5">
                                 <h1 class="display-5 text-capitalize">Cental <span class="text-primary">About</span></h1>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                                <p class="mb-0">At car rental service , we are dedicated to providing seamless, efficient, and customer-friendly car rental services. Our mission is to offer reliable vehicles, transparent pricing, and exceptional service for all types of travelers.
+
                                 </p>
                             </div>
                             <div class="row g-4">
@@ -279,7 +285,7 @@
                                             <img src="{% static   'img/about-icon-1.png' %}" class="img-fluid w-50 h-50" alt="Icon">
                                         </div>
                                         <h5 class="mb-3">Our Vision</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <p class="mb-0">To redefine mobility by making car rentals accessible, affordable, and reliable for everyone across India.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -288,11 +294,11 @@
                                             <img src="{% static   'img/about-icon-2.png' %}" class="img-fluid h-50 w-50" alt="Icon">
                                         </div>
                                         <h5 class="mb-3">Our Mision</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <p class="mb-0">Our mission is to deliver exceptional car rental services powered by technology, great customer experience, and integrity.</p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-item my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam ipsum. Sed suscipit dolorem libero sequi aut natus debitis reprehenderit facilis quaerat similique, est at in eum. Quo, obcaecati in!
+                            <p class="text-item my-4">We are a customer-focused car rental service with over 17 years of experience. Whether you're planning a weekend trip, a business meeting, or a city transfer, our fleet and services are designed to meet your needs with quality and care
                             </p>
                             <div class="row g-4">
                                 <div class="col-lg-6">
@@ -303,10 +309,10 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="rounded">
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Morbi tristique senectus</p>
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> A scelerisque purus</p>
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Dictumst vestibulum</p>
-                                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-1"></i> dio aenean sed adipiscing</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i>Trusted by thousands of satisfied clients.</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Clean, safe, and fuel-efficient vehicles.</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Easy booking and flexible rental periods.</p>
+                                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-1"></i> Professional drivers and 24/7 support.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-flex align-items-center">
@@ -401,7 +407,7 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Cental <span class="text-primary">Services</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">Our Central Service ensures a streamlined and high-quality car rental experience. We focus on efficiency, customer satisfaction, and reliability, making every journey smooth and hassle-free.
                     </p>
                 </div>
                 <div class="row g-4">
@@ -411,7 +417,7 @@
                                 <i class="fa fa-phone-alt fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Phone Reservation</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0">Book your car easily over the phone. Our team is ready to help you choose the right vehicle for your trip in just minutes.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -420,7 +426,7 @@
                                 <i class="fa fa-money-bill-alt fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Special Rates</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0">Take advantage of our special discounts for long-term rentals, festive seasons, and corporate bookings.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -429,7 +435,7 @@
                                 <i class="fa fa-road fa-2x"></i>
                             </div>
                             <h5 class="mb-3">One Way Rental</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0"> Need a drop-off in a different city? No problem. Use our one-way rental feature for intercity travel without returning the vehicle.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -438,7 +444,7 @@
                                 <i class="fa fa-umbrella fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Life Insurance</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0"> Drive stress-free with included rental insurance that covers passengers and vehicles under safety guidelines.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -447,7 +453,7 @@
                                 <i class="fa fa-building fa-2x"></i>
                             </div>
                             <h5 class="mb-3">City to City</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0"> Whether it’s a road trip or business travel, book rides between major cities with our fast and reliable intercity service. </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -456,7 +462,7 @@
                                 <i class="fa fa-car-alt fa-2x"></i>
                             </div>
                             <h5 class="mb-3">Free Rides</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quasi quibusdam ipsa perferendis iusto?</p>
+                            <p class="mb-0"> Get free rides and loyalty points with our referral program and promotional offers—because every mile counts.</p>
                         </div>
                     </div>
                 </div>
@@ -469,14 +475,15 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Vehicle <span class="text-primary">Categories</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">Our car rental service offers a diverse range of vehicle categories tailored to meet different customer needs. Whether you need a compact city car or a luxurious ride, we have options for every occasion.
                     </p>
                 </div>
+
                 <div class="categories-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="categories-item p-4">
                         <div class="categories-item-inner">
                             <div class="categories-img rounded-top">
-                                <img src="{% static   'img/car-1.png' %}" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="{% static 'img/car-1.png' %}" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="categories-content rounded-bottom p-4">
                                 <h4>Mercedes Benz R3</h4>
@@ -659,28 +666,29 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize text-white mb-3">Cental<span class="text-primary"> Process</span></h1>
-                    <p class="mb-0 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0 text-white">Our Central Process ensures smooth, efficient, and reliable car rental operations. From booking to return, every step is optimized to provide a seamless experience for customers.
+
                     </p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="steps-item p-4 mb-4">
                             <h4>Come In Contact</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <p class="mb-0">Reach out through our website, call, or visit any branch. Our team will guide you through the process.</p>
                             <div class="setps-number">01.</div>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="steps-item p-4 mb-4">
                             <h4>Choose A Car</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <p class="mb-0"> Select from a wide range of vehicles tailored to your budget and needs—from economy to luxury.</p>
                             <div class="setps-number">02.</div>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="steps-item p-4 mb-4">
                             <h4>Enjoy Driving</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorem!</p>
+                            <p class="mb-0"> Pick up your car and hit the road! Enjoy smooth rides, clean interiors, and reliable service every time.</p>
                             <div class="setps-number">03.</div>
                         </div>
                     </div>
@@ -694,7 +702,8 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Cental<span class="text-primary"> Blog & News</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">Our Central Blog & News section keeps you informed about the latest updates, industry trends, and company insights. Whether it's new car rental deals, customer success stories, or travel tips, we bring fresh and engaging content to enhance your experience.
+
                     </p>
                 </div>
                 <div class="row g-4">
@@ -710,7 +719,7 @@
                                     <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
                                 </div>
                                 <a href="#" class="h4 d-block mb-3">Rental Cars how to check driving fines?</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                                <p class="mb-3">Learn the step-by-step method to check and pay traffic fines before you rent a vehicle in India.</p>
                                 <a href="#" class="">Read More  <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -727,7 +736,7 @@
                                     <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
                                 </div>
                                 <a href="#" class="h4 d-block mb-3">Rental cost of sport and other cars</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                                <p class="mb-3">Discover how car rental pricing works and what factors affect costs for luxury and sports models.</p>
                                 <a href="#" class="">Read More  <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -744,7 +753,7 @@
                                     <div class="small"><span class="fa fa-comment-alt text-primary"></span><span class="ms-2">6 Comments</span></div>
                                 </div>
                                 <a href="#" class="h4 d-block mb-3">Document required for car rental</a>
-                                <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                                <p class="mb-3">Avoid delays by knowing exactly what ID and documents you need to rent a car hassle-free.</p>
                                 <a href="#" class="">Read More  <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -778,7 +787,13 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Customer<span class="text-primary"> Suport</span> Center</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">At car rental service , we are committed to providing excellent customer support alongside our top-tier car rental services. Our Customer Support Center is dedicated to assisting clients with bookings, inquiries, and any issues they may encounter.
+Key Features of Our Customer Support
+✔ 24/7 Assistance – Reach us anytime for guidance on reservations and car availability.
+✔ Quick Issue Resolution – Whether it's a payment concern or rental extension, we handle it efficiently.
+✔ Multiple Contact Options – Call, email, or chat with our friendly support team.
+✔ Feedback & Reviews – Share your experience to help us improve and serve you better.
+
                     </p>
                 </div>
                 <div class="row g-4">
@@ -789,7 +804,7 @@
                             </div>
                             <div class="team-content pt-4">
                                 <h4>HARSHVARDHAN GUPTA</h4>
-                                <p>Software Devolper</p>
+                                <p>Full-stack developer and UI/UX enthusiast.</p>
                                 <div class="team-icon d-flex justify-content-center">
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -806,7 +821,7 @@
                             </div>
                             <div class="team-content pt-4">
                                 <h4>DURGESH KHUSWHA</h4>
-                                <p>Software Devolper</p>
+                                <p>Backend engineer specializing in Django and system design.</p>
                                 <div class="team-icon d-flex justify-content-center">
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -823,7 +838,7 @@
                             </div>
                             <div class="team-content pt-4">
                                 <h4>LAXMIKANT SHARMA </h4>
-                                <p>Software Devolper</p>
+                                <p>Visionary founder with 10+ years of experience in the car rental industry.</p>
                                 <div class="team-icon d-flex justify-content-center">
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -840,7 +855,7 @@
                             </div>
                             <div class="team-content pt-4">
                                 <h4>RAHUL SHARMA</h4>
-                                <p>Business Man</p>
+                                <p> Business advisor and growth strategist.</p>
                                 <div class="team-icon d-flex justify-content-center">
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -860,7 +875,10 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Riviews</span></h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                    <p class="mb-0">At car rental service, customer feedback is at the heart of our growth. We take pride in delivering top-quality service, ensuring every rental experience is smooth, reliable, and affordable.
+Our clients have shared their experiences, highlighting aspects such as hassle-free bookings, clean and well-maintained vehicles, friendly customer support, and transparent pricing. Their words reflect our commitment to excellence and inspire us to keep improving.
+Whether it's a short trip or an extended journey, we value every review and strive to make every rental seamless. Join our satisfied customers and experience the difference yourself! 
+
                     </p>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -903,7 +921,7 @@
                             </div>
                         </div>
                         <div class="border-top rounded-bottom p-4">
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta neque ab repudiandae reprehenderit ipsum eos cumque esse repellendus impedit.</p>
+                            <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta neque ab repudiandae reprehenderit ipsum eos cumque esse repellendus impedit.</p>
                         </div>
                     </div>
                     <div class="testimonial-item">
@@ -931,5 +949,9 @@
             </div>
         </div>
         <!-- Testimonial End -->
+</body>
+</html>
+
+
 {% endblock %}
         
